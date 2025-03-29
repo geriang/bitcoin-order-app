@@ -28,7 +28,7 @@ jobs:
 
       - name: Run scan with ODC
         run: |
-          ./dependency-check/bin/dependency-check.sh --project "bitcoin" --scan . --out ODC-report
+          ./dependency-check/bin/dependency-check.sh --project "bitcoin" --scan . --out ODC-report --failOnCVSS 7
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
